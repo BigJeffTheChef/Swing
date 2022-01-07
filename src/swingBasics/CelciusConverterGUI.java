@@ -45,6 +45,7 @@ public class CelciusConverterGUI extends JFrame {
 		
 		textField = new JTextField();
 		contentPane.add(textField, BorderLayout.NORTH);
+		//contentPane.ad
 		textField.setColumns(10);
 		
 		JLabel lblNewLabel = new JLabel("New label");
