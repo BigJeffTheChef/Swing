@@ -18,7 +18,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		ImageIcon image = new ImageIcon("./Calculator-19smol.png");
-		Border border = BorderFactory.createLineBorder(Color.GREEN,3);
+		Border border = BorderFactory.createLineBorder(Color.GREEN, 3);
 
 		// JLabel: A GUI display area for a String of text, an image, or both
 		JLabel label = new JLabel();
@@ -33,11 +33,24 @@ public class Main {
 		label.setOpaque(true);									// paints every pixel within component bounds
 		// label takes up entire space unless otherwise specified
 		label.setBorder(border);								// again label takes up as much as possible
+		label.setVerticalAlignment(JLabel.CENTER);				// set veritcal position of icon+text within label
+		label.setHorizontalAlignment(JLabel.CENTER);			// set horizontal positon of icon+text within label
+		//label.setBounds(0, 0, 250, 250);						// set the x and y position of label in frame, and dimensions
 
 		// Jframe: a GUI window to add components to - implemented as a custom JFrame subclass (can also just set stuff here)
-		MyFrame myframe = new MyFrame();
+		JFrame frame = new JFrame();
+		frame.setSize(420, 420); 								// sets x and y dimension of this
+		//frame.setLayout(null); 								// disable default layout manager
+		frame.setTitle("Jthis title goes here");				// sets title of this
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	// exit out of application (otherwise it just hides this)
+		//frame.setResizable(false); 									// prevents this from being resized
 
-		myframe.add(label);										// add JLabel to JFrame
+		frame.setIconImage(image.getImage());					// set icon to image ImageIcon (not on linux?)
+		frame.getContentPane().setBackground(new Color(0xFFFFFF));// change background colour of image
+
+		frame.setVisible(true);
+		frame.add(label);										// add JLabel to JFrame
+		frame.pack(); 											// automatically sizes the window to the components size (add components before packing)
 	}
 
 }
