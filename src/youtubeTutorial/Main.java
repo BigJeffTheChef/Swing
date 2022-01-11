@@ -35,7 +35,7 @@ public class Main {
 		label.setBorder(border);								// again label takes up as much as possible
 		label.setVerticalAlignment(JLabel.CENTER);				// set veritcal position of icon+text within label
 		label.setHorizontalAlignment(JLabel.CENTER);			// set horizontal positon of icon+text within label
-		//label.setBounds(0, 0, 250, 250);						// set the x and y position of label in frame, and dimensions
+		label.setBounds(0, 0, 250, 250);						// set the x and y position of label in frame, and dimensions
 
 		// Jframe: a GUI window to add components to - implemented as a custom JFrame subclass (can also just set stuff here)
 		JFrame frame = new JFrame();
