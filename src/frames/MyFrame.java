@@ -1,4 +1,4 @@
-package tutorial;
+package frames;
 
 import java.awt.Color;
 
