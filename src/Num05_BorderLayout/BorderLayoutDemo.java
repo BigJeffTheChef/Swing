@@ -11,6 +11,13 @@ import javax.swing.JPanel;
 public class BorderLayoutDemo {
 
 	public static void main(String[] args) {
+		/*
+		 * Layout Manager =  defines the natural layout for components within a container
+		 * 
+		 * BorderLayout = 	A BorderLayout places its components in five areas: NORTHE, EAST, SOUTH, WEST and CENTER
+		 * 					All extra space is placed in the centre area
+		 */
+		
 		int width_margin = 10;
 		int height_margin = 10;
 
